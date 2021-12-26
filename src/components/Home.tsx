@@ -3,10 +3,35 @@ import { Transition } from "@headlessui/react";
 
 import Logo from "./assets/img/logo.png";
 import MoonBG from "./assets/img/moonbg.png";
+import MoonIcon from "./assets/img/moon.png";
+import MarsIcon from "./assets/img/mars.png";
+import SkyIcon from "./assets/img/sky.png";
+
+import Maps from "./Maps";
 
 const Home = (props: any) => {
   // Landing
   const [isOpen, setIsOpen] = useState(false);
+
+  // Maps
+  const [mapsOpen, setMapsOpen] = useState(false);
+  const [moonOpen, setMoonOpen] = useState(false);
+  const [marsOpen, setMarsOpen] = useState(false);
+  const [skyOpen, setSkyOpen] = useState(false);
+
+  // Maps runner funcs
+  function runMoonMap() {
+    setMapsOpen(true);
+    setMoonOpen(true);
+  }
+  function runMarsMap() {
+    setMapsOpen(true);
+    setMarsOpen(true);
+  }
+  function runSkyMap() {
+    setMapsOpen(true);
+    setSkyOpen(true);
+  }
 
   return (
     <div className="relative bg-white overflow-hidden">
@@ -209,8 +234,47 @@ const Home = (props: any) => {
                 mars, and the night sky through an interactive map view.
                 <br />
               </p>
+              <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                <div className="mt-3 sm:mt-0 sm:ml-3">
+                  <button
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-500 bg-blue-200 hover:text-white hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-400 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                    onClick={() => runMoonMap()}
+                  >
+                    <img className="w-6 mr-3" src={MoonIcon} alt="Moon" />
+                    Moon
+                  </button>
+                </div>
+                <div className="mt-3 sm:mt-0 sm:ml-3">
+                  <button
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-500 bg-blue-200 hover:text-white hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-400 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                    onClick={() => runMarsMap()}
+                  >
+                    <img className="w-6 mr-3" src={MarsIcon} alt="Mars" />
+                    Mars
+                  </button>
+                </div>
+                <div className="mt-3 sm:mt-0 sm:ml-3">
+                  <button
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-500 bg-blue-200 hover:text-white hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-400 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                    onClick={() => runSkyMap()}
+                  >
+                    <img className="w-6 mr-3" src={SkyIcon} alt="Sky" />
+                    Sky
+                  </button>
+                </div>
+              </div>
             </div>
           </main>
+          <Maps
+            mapsOpen={mapsOpen}
+            setMapsOpen={setMapsOpen}
+            moonOpen={moonOpen}
+            setMoonOpen={setMoonOpen}
+            marsOpen={marsOpen}
+            setMarsOpen={setMarsOpen}
+            skyOpen={skyOpen}
+            setSkyOpen={setSkyOpen}
+          />
         </div>
       </div>
 
