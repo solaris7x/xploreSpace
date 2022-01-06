@@ -1,8 +1,6 @@
 import { useState, useEffect, forwardRef } from "react";
 import axios from "axios";
 
-import NasaIcon from "./assets/img/nasaicon.png";
-
 const Nasa = forwardRef((props, newsRef: any) => {
   //   const { name, value, description } = props;
 
@@ -65,7 +63,11 @@ const Nasa = forwardRef((props, newsRef: any) => {
             <div className="bg-white shadow overflow-hidden sm:rounded-lg">
               <div className="px-4 pt-5 pb-4 border-xl border-gray-200 sm:px-6">
                 <p className="text-sm flex text-grey-dark items-center">
-                  <img className="w-5 h-5 mr-2" src={NasaIcon} alt="Nasa" />
+                  <img
+                    className="w-5 h-5 mr-2"
+                    src="/images/nasaicon.png"
+                    alt="Nasa"
+                  />
                   Mars Rover Photos
                 </p>
                 <div className="text-black font-bold text-xl">
@@ -138,7 +140,7 @@ const Nasa = forwardRef((props, newsRef: any) => {
                       <p className="text-sm text-grey-dark flex items-center">
                         <img
                           className="w-5 h-5 mr-2"
-                          src={NasaIcon}
+                          src="/images/nasaicon.png"
                           alt="Nasa"
                         />
                         Astronomy Picture of the Day

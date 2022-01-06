@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { Transition } from "@headlessui/react";
 
-import Logo from "./assets/img/logo.png";
-import MoonBG from "./assets/img/moonbg.png";
-import MoonIcon from "./assets/img/moon.png";
-import MarsIcon from "./assets/img/mars.png";
-import SkyIcon from "./assets/img/sky.png";
-
 import Maps from "./Maps";
 
 const Home = (props: any) => {
@@ -52,7 +46,7 @@ const Home = (props: any) => {
                   <a href="/" aria-label="Home">
                     <img
                       className="h-8 w-auto sm:h-10"
-                      src={Logo}
+                      src="/images/logo.png"
                       alt="Space View Logo"
                     />
                   </a>
@@ -131,7 +125,11 @@ const Home = (props: any) => {
                   >
                     <div className="px-5 pt-4 flex items-center justify-between">
                       <div>
-                        <img className="h-8 w-auto" src={Logo} alt="Logo" />
+                        <img
+                          className="h-8 w-auto"
+                          src="/images/logo.png"
+                          alt="Logo"
+                        />
                       </div>
                       <div className="-mr-2">
                         <button
@@ -228,7 +226,11 @@ const Home = (props: any) => {
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-500 bg-blue-200 hover:text-white hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-400 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
                     onClick={() => runMoonMap()}
                   >
-                    <img className="w-6 mr-3" src={MoonIcon} alt="Moon" />
+                    <img
+                      className="w-6 mr-3"
+                      src={"/images/moon.png"}
+                      alt="Moon"
+                    />
                     Moon
                   </button>
                 </div>
@@ -237,7 +239,11 @@ const Home = (props: any) => {
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-500 bg-blue-200 hover:text-white hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-400 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
                     onClick={() => runMarsMap()}
                   >
-                    <img className="w-6 mr-3" src={MarsIcon} alt="Mars" />
+                    <img
+                      className="w-6 mr-3"
+                      src={"/images/mars.png"}
+                      alt="Mars"
+                    />
                     Mars
                   </button>
                 </div>
@@ -246,7 +252,11 @@ const Home = (props: any) => {
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-500 bg-blue-200 hover:text-white hover:bg-blue-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-400 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
                     onClick={() => runSkyMap()}
                   >
-                    <img className="w-6 mr-3" src={SkyIcon} alt="Sky" />
+                    <img
+                      className="w-6 mr-3"
+                      src={"/images/sky.png"}
+                      alt="Sky"
+                    />
                     Sky
                   </button>
                 </div>
@@ -269,7 +279,7 @@ const Home = (props: any) => {
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-full">
         <img
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full xl:h-full"
-          src={MoonBG}
+          src={"/images/moonbg.png"}
           alt="Moon"
         />
       </div>
